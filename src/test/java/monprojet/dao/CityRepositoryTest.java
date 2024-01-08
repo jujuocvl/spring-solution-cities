@@ -54,4 +54,17 @@ public class CityRepositoryTest {
         }    
     }
 
+    @Test
+    void nbPopulationTotale() {
+        assertEquals(12, countryDAO.nbPopulation(1));
+        //12 = expected idPays = 1 correspond à l'ID de la france
+        // donc on dit qu'on attend 12 quand on demande le nombre de la population en france
+    }
+
+    @Test
+    void CountryPopulationParPaysTest() {
+        assertEquals(countryDAO.PopParPays().size(), countryDAO.count());
+    }
+
+
 }
